@@ -495,8 +495,7 @@ template {
   margin: 0 0 49px;
 }
 
-.main-subtitle {
-  font-size: 20px;
+.main .subtitle-h3 {
   font-weight: 100;
   margin-bottom: 63px;
 }
@@ -617,7 +616,7 @@ template {
           filter: grayscale(100%);
 }
 
-.layouts .foto:hover {
+.layouts-cards:hover .foto {
   -webkit-filter: none;
           filter: none;
 }
@@ -768,7 +767,7 @@ template {
 }
 
 .advantages {
-  padding: 100px 0 100px;
+  padding: 100px 0 20px;
   color: white;
   background: url("../img/progress/basckground.png");
 }
@@ -809,6 +808,122 @@ template {
   line-height: 20px;
 }
 
+.klients {
+  padding: 100px 0 100px;
+}
+
+.klients-subtitle {
+  margin: 0 auto 100px;
+}
+
+.klients-common {
+  position: relative;
+}
+
+.klients-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  left: 0;
+}
+
+.klients .slider {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.klients .slider__item {
+  width: 20%;
+}
+
+.footer {
+  background-color: #191919;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 146px;
+  color: white;
+  font-size: 13px;
+}
+
+.footer-contacts .callback__phone {
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-contacts .callback__text {
+  color: #209a9f;
+  border-bottom: 1px solid #B6DCDE;
+  height: 20px;
+  cursor: pointer;
+}
+
+.footer-contacts .callback__text:hover {
+  border-bottom: 2px solid #1b4143;
+  font-size: 15px;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.52);
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: none;
+  border: 3px solid #B6DCDE;
+}
+
+.modal_visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modal__close:hover {
+  cursor: pointer;
+}
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -830,6 +945,11 @@ body {
 
 .container .subtitle-h3 {
   font-size: 20px;
+  text-align: center;
+}
+
+.container .subtitle-h4 {
+  font-size: 24px;
   text-align: center;
 }
 
@@ -874,6 +994,12 @@ img {
   .realized .button {
     margin: 0 auto;
     display: block;
+  }
+  .klients .slider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
