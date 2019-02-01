@@ -868,6 +868,10 @@ template {
           flex-direction: column;
 }
 
+.footer .maps {
+  height: 450px;
+}
+
 .footer-contacts {
   display: -webkit-box;
   display: -ms-flexbox;
