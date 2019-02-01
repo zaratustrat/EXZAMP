@@ -23,7 +23,7 @@
     </div>
      <div class="header-callback">
        <a class="callback__phone" href="tel:+8 800 891-33-33">8 800 891-33-33</a>
-       <div class="callback__text">Заказать обратный звонок</div>
+       <div  id="button-callback" class="callback__text">Заказать обратный звонок</div>
      </div>
     </div>
    </div>
@@ -41,27 +41,27 @@
           <div class="main-icon">
             <img src="img/header/h5.png" alt="5">
           </div>
-          <div class="main-text">Срок производства <br>от 5 дней</div>
+          <div class="main-text wow bounceInRight" data-wow-delay="0.2s">Срок производства <br>от 5 дней</div>
         </div>
       
         <div class="main-icon__text">
           <div class="main-icon">
             <img src="img/header/h24.png" alt="24">
           </div>
-          <div class="main-text">Гарантия на макеты <br>24 месяца</div>
+          <div class="main-text wow bounceInRight" data-wow-delay="0.4s">Гарантия на макеты <br>24 месяца</div>
         </div>
         <div class="main-icon__text">
-          <div class="main-icon">
+          <div class="main-icon wow">
             <img src="img/header/reload.png" alt="reload">
           </div>
-          <div class="main-text">Проектируем, изготавливаем, доставляем <br>и устанавливаем</div>
+          <div class="main-text wow bounceInRight" data-wow-delay="0.6s">Проектируем, изготавливаем, доставляем <br>и устанавливаем</div>
         </div>
       
         <div class="main-icon__text">
           <div class="main-icon">
             <img src="img/header/map.png" alt="map">
           </div>
-          <div class="main-text">Застрахуем, доставим и установим</div>
+          <div class="main-text wow bounceInRight" data-wow-delay="0.8s">Застрахуем, доставим и установим</div>
         </div>
       </div>
       
@@ -182,11 +182,11 @@
         <h2 class="realized-subtitle subtitle">Реализованные проекты</h2>
         <h3 class="realized-subtitle-h3 subtitle-h3">Более 100 компаний уже решают свои бизнес – задачи с помощью наших макетов</h3>
       <div class="realized-common">
-        <div class="realized-arrow">
-          <div class="left">
+        <div class="realized-arrow arrow">
+          <div class="arrow_left">
             <img src="img/done/left-arrow.png" alt="">
           </div>
-          <div class="right">
+          <div class="arrow_right">
             <img src="img/done/right-arrow.png" alt="">
           </div>
         </div>
@@ -250,7 +250,7 @@
             <div class="advantages-text">Наглядно представить объект посетителю с целью ознакомления с территорией, зданием.</div>
           </div>
 
-          <div class="advantages-icon__text">
+          <div class="advantages-icon__text ">
             <div class="advantages-icon">
               <img src="img/progress/icon 4.png" alt="">
             </div>
@@ -294,13 +294,7 @@
       <div class="container">
         <h4 class="klients-subtitle subtitle-h4">Наши клиенты</h4>
         <div class="klients-common">
-          
-           <div class="klients-arrow">
-            <img class="klients-arrow__left" src="img/customers/left-arrow.png" alt="">
-            <img class="klient-arrow__right" src="img/customers/right-arrow.png" alt="">
-          </div>
-          
-          <div class="klient-slider slider">
+           <div class="klient-slider slider">
               <div class="slider__item">
                 <img src="img/customers/gazprom.png" alt="">
               </div>
@@ -316,6 +310,7 @@
               <div class="slider__item">
                 <img src="img/customers/vaz.png" alt="">
               </div>
+              
             </div>
           </div>
         </div>
@@ -341,22 +336,25 @@
   </div>
 
     <div class="modal" id="modal-callback">
-    <div class="form">
-      <form action="mailer/smart.php" method="POST" class="ajax">
-        <div class="main-form">
-          <h3 class="form-title">Оставьте заявку и получите расчет стоимость макета в течение <b>30 минут</b></h3>
-          <input type="text" name="user_name" class="input input-name form__input" placeholder="Ваше имя">
-          <input type="tel" name="user_phone" class="input input-phone form__input" placeholder="Контактный телефон">
-          <input type="email" name="user_email" class="input input-email form__input" placeholder="Электронная почта">
-          <button type="submit" class="button form__button">Оставить заявку</button>
-        </div>
-      </form>
-      <div class="modal__close">&#10006;</div>
+      <div class="modal__dialog">
+       <div class="modal__close">&#10006;</div>
+      <div class="form">
+        <form action="mailer/smart.php" method="POST" class="ajax">
+          <div class="main-form modal-form">
+            <h3 class="form-title">Оставьте заявку и получите расчет стоимость макета в течение <b>30 минут</b></h3>
+            <input type="text" name="user_name" class="input input-name form__input" placeholder="Ваше имя">
+            <input type="tel" name="user_phone" class="input input-phone form__input" placeholder="Контактный телефон">
+            <input type="email" name="user_email" class="input input-email form__input" placeholder="Электронная почта">
+            <button type="submit" class="button form__button">Оставить заявку</button>
+          </div>
+        </form>
+      </div>
     </div>
+    
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <!-- <script src="js/slick.min.js"></script> -->
+  <script src="js/slick.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script>
     new WOW().init();

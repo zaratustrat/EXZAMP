@@ -1,5 +1,5 @@
 <?php 
-
+$mail =$_POST['user_name']
 $name = $_POST['user_name'];
 $phone = $_POST['user_phone'];
 
@@ -31,7 +31,8 @@ $mail->Subject = 'Это тема сообщения';
 $mail->Body    = '
 	Пользователь оставил свои данные <br> 
 	Имя: ' . $name . ' <br>
-	Телефон: ' . $phone . '';
+	Телефон: ' . $phone . ' <br>
+	Имейл: ' . $mail . '';
 $mail->AltBody = 'Это альтернативный текст';
 
 if(!$mail->send()) {

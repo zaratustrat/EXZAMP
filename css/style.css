@@ -816,40 +816,45 @@ template {
   margin: 0 auto 100px;
 }
 
-.klients-common {
-  position: relative;
-}
-
-.klients-arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  width: 100%;
-  top: 20px;
-  left: 0;
-}
-
 .klients .slider {
   width: 90%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
 }
 
 .klients .slider__item {
-  width: 20%;
+  text-align: center;
+}
+
+.klients .slider img {
+  margin: auto;
+}
+
+.klients .slick-slide {
+  outline: none;
+}
+
+.klients .arrow {
+  width: 14px;
+  height: 26px;
+  position: absolute;
+}
+
+.klients .arrow:hover {
+  cursor: pointer;
+}
+
+.klients .arrow_right {
+  left: 100%;
+  top: 17px;
+  background: url("../img/done/arrow-right.png") no-repeat center;
+  background-size: 100%;
+}
+
+.klients .arrow_left {
+  left: -4%;
+  top: 17px;
+  background: url("../img/done/arrow-left.png") no-repeat center;
+  background-size: 100%;
 }
 
 .footer {
@@ -905,13 +910,30 @@ template {
   top: 0;
   z-index: 99;
   display: none;
-  border: 3px solid #B6DCDE;
 }
 
 .modal_visible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.modal__dialog {
+  width: 380px;
+  height: 440px;
+  border: 2px solid #17D9EF;
+  background-color: #fff;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
 .modal__close {
@@ -922,6 +944,10 @@ template {
 
 .modal__close:hover {
   cursor: pointer;
+}
+
+.modal-form .form-title {
+  text-align: center;
 }
 
 *, *:after, *:before {
@@ -994,12 +1020,6 @@ img {
   .realized .button {
     margin: 0 auto;
     display: block;
-  }
-  .klients .slider {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
