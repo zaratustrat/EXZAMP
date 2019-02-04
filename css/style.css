@@ -674,12 +674,12 @@ template {
   padding: 100px 0 100px;
 }
 
-.realized-subtitle {
+.realized-subtitle-h2 {
   margin-bottom: 70px;
   position: relative;
 }
 
-.realized-subtitle:before {
+.realized-subtitle-h2:before {
   content: '';
   display: block;
   width: 31px;
@@ -694,36 +694,50 @@ template {
   margin: 0 auto 41px;
 }
 
-.realized-arrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.realized .slider__item {
+  outline: none;
+}
+
+.realized .arrow {
+  width: 14px;
+  height: 26px;
   position: absolute;
-  width: 100%;
-  top: 51%;
-  left: 0;
+}
+
+.realized .arrow:hover {
+  cursor: pointer;
+}
+
+.realized .arrow_right {
+  left: 100%;
+  top: 240px;
+  background: url("../img/done/arrow-right.png") no-repeat center;
+  background-size: 100%;
+}
+
+.realized .arrow_left {
+  left: -1%;
+  top: 240px;
+  background: url("../img/done/arrow-left.png") no-repeat center;
+  background-size: 100%;
 }
 
 .realized-common {
   padding-top: 80px;
+  position: relative;
+}
+
+.realized .slider-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
 }
 
-.realized-foto {
+.realized-img {
   margin-right: 42px;
-}
-
-.realized-foto .port {
-  width: 412px;
 }
 
 .realized-text {
@@ -733,9 +747,6 @@ template {
 .realized .prezent {
   line-height: 28px;
   margin-bottom: 45px;
-}
-
-.realized .prezent-text {
   font-size: 16px;
   font-weight: 700;
 }

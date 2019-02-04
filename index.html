@@ -181,46 +181,83 @@
 
     <div class="realized">
       <div class="container">
-        <h2 class="realized-subtitle subtitle">Реализованные проекты</h2>
+        <h2 class="realized-subtitle-h2 subtitle">Реализованные проекты</h2>
         <h3 class="realized-subtitle-h3 subtitle-h3">Более 100 компаний уже решают свои бизнес – задачи с помощью наших макетов</h3>
-      <div class="realized-common">
-        <div class="realized-arrow arrow">
-          <div class="arrow_left">
-            <img src="img/done/left-arrow.png" alt="">
-          </div>
-          <div class="arrow_right">
-            <img src="img/done/right-arrow.png" alt="">
-          </div>
-        </div>
-         
-          <div class="realized-foto">
-            <img class="port" src="img/done/port.png" alt="port">
-          </div>
-          <div class="realized-text">
-            <h3 class="realized-text__subtitle">Порт Артек</h3>
-            <div class="prezent">
-              <div class="small-text">Описание:</div>
-              <div class="prezent-text">Презентация порта Артек для первых лиц государства</div>
+      <div class="realized-common realized-slider">
+        
+         <div class="slider__item">
+
+           <div class="slider-wrap">
+
+            <div class="realized-img">
+              <img src="img/done/port.png" alt="port">
             </div>
             
-            <div class="realized-small__text">
-              <div class="realized-small">
-                <div class="small-text">Масштаб:</div>
-                <div class="small-nubrs">1:200</div>
+            <div class="realized-text">
+              <h3 class="realized-text__subtitle">Порт Артек</h3>
+              <div class="prezent">
+                <div class="small-text">Описание:</div>
+                <div class="prezent-text">Презентация порта Артек для первых лиц государства</div>
               </div>
-
-              <div class="realized-small">
-                <div class="small-text">Размер::</div>
-                <div class="small-nubrs">1000х2000</div>
+            
+              <div class="realized-small__text">
+                <div class="realized-small">
+                  <div class="small-text">Масштаб:</div>
+                  <div class="small-nubrs">1:200</div>
+                </div>
+            
+                <div class="realized-small">
+                  <div class="small-text">Размер::</div>
+                  <div class="small-nubrs">1000х2000</div>
+                </div>
+            
+                <div class="realized-small">
+                  <div class="small-text">Срок изготовления::</div>
+                  <div class="small-nubrs">40 дней</div>
+                </div>
               </div>
-
-              <div class="realized-small">
-                <div class="small-text">Срок изготовления::</div>
-                <div class="small-nubrs">40 дней</div>
-              </div>
+              <button type="submit" class="button form__button">Заказать макет</button>
             </div>
-          <button type="submit" class="button form__button">Заказать макет</button>
+            </div>
           </div>
+
+          <div class="slider__item">
+          
+          <div class="slider-wrap">
+          
+            <div class="realized-img ">
+              <img src="img/done/home-2.png" alt="port">
+            </div>
+          
+            <div class="realized-text">
+              <h3 class="realized-text__subtitle">Порт Артек</h3>
+              <div class="prezent">
+                <div class="small-text">Описание:</div>
+                <div class="prezent-text">Презентация порта Артек для первых лиц государства</div>
+              </div>
+          
+              <div class="realized-small__text">
+                <div class="realized-small">
+                  <div class="small-text">Масштаб:</div>
+                  <div class="small-nubrs">1:200</div>
+                </div>
+          
+                <div class="realized-small">
+                  <div class="small-text">Размер::</div>
+                  <div class="small-nubrs">1000х2000</div>
+                </div>
+          
+                <div class="realized-small">
+                  <div class="small-text">Срок изготовления::</div>
+                  <div class="small-nubrs">40 дней</div>
+                </div>
+              </div>
+              <button type="submit" class="button form__button">Заказать макет</button>
+            </div>
+          </div>
+          </div>
+           
+         
         </div>
       </div>
     </div>
@@ -312,7 +349,9 @@
               <div class="slider__item">
                 <img src="img/customers/vaz.png" alt="">
               </div>
-              
+              <div class="slider__item">
+                <img src="img/customers/vaz.png" alt="">
+              </div>
             </div>
           </div>
         </div>
@@ -370,37 +409,70 @@
       });
     });
 
-    $(document).ready(function () {
-      $('.slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        nextArrow: '<div class="arrow arrow_right"></div>',
-        prevArrow: '<div class="arrow arrow_left"></div>',
-        responsive: [
-          {
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
+     $(document).ready(function () {
+        $('.realized-slider').slick({
+          infinite: true,
+          nextArrow: '<div class="arrow arrow_right"></div>',
+          prevArrow: '<div class="arrow arrow_left"></div>',
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            },
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
             }
-          },
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
+          ]
 
-      });
+        });
+
+    // $(document).ready(function () {
+    //   $('.slider').slick({
+    //     infinite: true,
+    //     slidesToShow: 5,
+    //     slidesToScroll: 1,
+    //     nextArrow: '<div class="arrow arrow_right"></div>',
+    //     prevArrow: '<div class="arrow arrow_left"></div>',
+    //     responsive: [
+    //       {
+    //         breakpoint: 1200,
+    //         settings: {
+    //           slidesToShow: 3,
+    //           slidesToScroll: 1,
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 1024,
+    //         settings: {
+    //           slidesToShow: 2,
+    //           slidesToScroll: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 768,
+    //         settings: {
+    //           slidesToShow: 1,
+    //           slidesToScroll: 1
+    //         }
+    //       }
+    //     ]
+
+    //   });
+
       $('form').submit(function (event) {
         event.preventDefault();
         $.ajax({
